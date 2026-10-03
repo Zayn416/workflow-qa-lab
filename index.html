@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workflow QA Lab</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><h1>Workflow QA Lab</h1><p>Task workflow and audit trail</p></header>
+  <main>
+    <section class="composer" aria-labelledby="new-task-heading">
+      <h2 id="new-task-heading">New task</h2>
+      <form id="task-form">
+        <label for="title">Title</label>
+        <input id="title" name="title" minlength="3" maxlength="120" required placeholder="Check nightly build">
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority"><option value="normal">Normal</option><option value="high">High</option><option value="low">Low</option></select>
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+    <section aria-labelledby="task-heading">
+      <div class="section-heading"><h2 id="task-heading">Tasks</h2><button id="refresh" type="button">Refresh</button></div>
+      <p id="message" role="status" aria-live="polite"></p>
+      <div id="tasks" class="tasks"></div>
+    </section>
+  </main>
+</body>
+</html>

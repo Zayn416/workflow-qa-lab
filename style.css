@@ -1,0 +1,32 @@
+:root { font-family: system-ui, sans-serif; color: #18212b; background: #f6f8fa; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { background: #172b3a; color: white; padding: 20px max(24px, calc((100vw - 920px) / 2)); }
+h1 { font-size: 24px; margin: 0 0 4px; }
+header p { margin: 0; color: #bed2dc; }
+main { max-width: 920px; margin: 0 auto; padding: 28px 24px; display: grid; gap: 32px; }
+section { border-bottom: 1px solid #d7e0e5; padding-bottom: 28px; }
+h2 { font-size: 18px; margin: 0 0 16px; }
+form { display: grid; grid-template-columns: minmax(200px, 1fr) 160px auto; gap: 8px 12px; align-items: end; }
+label { font-size: 13px; font-weight: 600; }
+label[for=title] { grid-column: 1; }
+label[for=priority] { grid-column: 2; }
+input, select, button { min-height: 40px; border-radius: 4px; font: inherit; }
+input, select { border: 1px solid #9aaab5; background: white; padding: 8px 10px; min-width: 0; }
+button { border: 1px solid #205c53; background: #176b5d; color: white; padding: 8px 14px; cursor: pointer; }
+button:hover { background: #0e5448; }
+button:disabled { opacity: .55; cursor: wait; }
+#task-form button { grid-column: 3; grid-row: 2; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; }
+.section-heading button, .actions button { background: white; color: #176b5d; }
+.section-heading button:hover, .actions button:hover { background: #e6f2ef; }
+#message { min-height: 24px; color: #a34429; }
+.tasks { display: grid; gap: 10px; }
+.task { border: 1px solid #d7e0e5; background: white; padding: 16px; border-radius: 4px; }
+.task-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.task h3 { font-size: 16px; margin: 0 0 5px; overflow-wrap: anywhere; }
+.meta { color: #536572; font-size: 13px; margin: 0; }
+.status { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #155a50; white-space: nowrap; }
+.actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.events { font-size: 13px; color: #465764; margin: 10px 0 0; padding-left: 20px; }
+@media (max-width: 640px) { form { grid-template-columns: 1fr; } label[for=priority], #task-form button { grid-column: 1; grid-row: auto; } .task-head { flex-direction: column; } }
